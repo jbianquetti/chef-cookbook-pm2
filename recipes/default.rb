@@ -8,4 +8,4 @@
 include_recipe 'pm2::nodejs'
 include_recipe 'pm2::pm2'
 
-pm2_app node['pm2']['app_name']
+#pm2_app node['pm2']['app_name']
