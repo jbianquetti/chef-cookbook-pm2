@@ -4,7 +4,8 @@ cd <%= @path %>/current
 
 npm install
 
-pm2 kill <%= @name %>
+pm2 stop <%= @name %>
+pm2 kill
 PORT=<%= @port %> pm2 start <%= @js %> \
     -n <%= @name %> \
     -e ../logs/err-nodejs.log \
