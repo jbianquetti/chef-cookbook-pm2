@@ -5,7 +5,7 @@
 # Copyright 2014, Joe Richards
 #
 
-nodejs_npm 'nodejs-forever-agent'
+nodejs_npm 'forever-agent'
 nodejs_npm 'coffee-script'
 
 nodejs_npm 'grunt-contrib-watch'
