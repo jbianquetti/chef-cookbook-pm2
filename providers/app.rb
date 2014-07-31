@@ -70,7 +70,7 @@ end
 
 action :restart do
     server_start = execute "run #{new_resource.name}" do
-        command './server-start.sh'
+        command './server-start.sh &'
         cwd new_resource.path
         user new_resource.user
         group new_resource.group
