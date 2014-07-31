@@ -8,9 +8,6 @@ pm2 stop <%= @name %>
 pm2 kill
 PORT=<%= @port %> pm2 start <%= @js %> \
     -n <%= @name %> \
-    -e ../logs/err-nodejs.log \
-    -o ../logs/output-nodejs.log \
-    -p ../logs/pid-nodejs.pid \
     --run-as-user <%= @user %> \
     --run-as-group <%= @group %> \
     -i max
