@@ -1,10 +1,10 @@
 #!/bin/bash
 
-cd <%= @path %>/webroot
+cd <%= @path %>/current
 
 npm install
 
-pm2 delete <%= @name %>
+pm2 kill <%= @name %>
 PORT=<%= @port %> pm2 start <%= @js %> \
     -n <%= @name %> \
     -e ../logs/err-nodejs.log \
