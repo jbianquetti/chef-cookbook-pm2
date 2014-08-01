@@ -2,14 +2,6 @@
 
 cd <%= @path %>/current
 
-sudo su pm2 npm install
+sudo su pm2 -c 'npm install'
 
-#pm2 delete <%= @name %>
-
-sudo su pm2 npm start
-
-#PORT=<%= @port %> pm2 start <%= @js %> \
-#    -n <%= @name %> \
-#    --run-as-user <%= @user %> \
-#    --run-as-group <%= @group %> \
-#    -i max
+sudo su pm2 -c 'npm start'
