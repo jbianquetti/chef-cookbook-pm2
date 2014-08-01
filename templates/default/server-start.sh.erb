@@ -2,11 +2,11 @@
 
 cd <%= @path %>/current
 
-su  pm2 -c 'npm install'
+sudo  -u pm2 npm install
 
 #pm2 delete <%= @name %>
 
-su  pm2 -c 'npm start'
+sudo  -u pm2 npm start
 
 #PORT=<%= @port %> pm2 start <%= @js %> \
 #    -n <%= @name %> \
