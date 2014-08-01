@@ -2,11 +2,11 @@
 
 cd <%= @path %>/current
 
-npm install -g 
+su - pm2 -c 'npm install'
 
 #pm2 delete <%= @name %>
 
-npm start
+su - pm2 -c 'npm start'
 
 #PORT=<%= @port %> pm2 start <%= @js %> \
 #    -n <%= @name %> \
