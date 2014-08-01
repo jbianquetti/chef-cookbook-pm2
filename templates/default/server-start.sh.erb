@@ -6,9 +6,10 @@ npm install
 
 pm2 delete <%= @name %>
 
-PORT=<%= @port %> pm2 start <%= @js %> \
-    -n <%= @name %> \
-    --run-as-user <%= @user %> \
-    --run-as-group <%= @group %> \
-    -i max
+npm start
 
+#PORT=<%= @port %> pm2 start <%= @js %> \
+#    -n <%= @name %> \
+#    --run-as-user <%= @user %> \
+#    --run-as-group <%= @group %> \
+#    -i max
