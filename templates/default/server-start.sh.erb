@@ -4,6 +4,6 @@ cd <%= @path %>/current
 
 echo "USER => $USER"
 
-sudo -u  pm2 -c 'npm install'
+sudo -u  pm2 -H <%= @path %>/current  npm install
 
-sudo -u  pm2 -c 'npm start'
+sudo -u  pm2 -H <%= @path %>/current  npm start
