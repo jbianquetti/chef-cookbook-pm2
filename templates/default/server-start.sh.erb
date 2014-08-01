@@ -2,10 +2,10 @@
 
 cd <%= @path %>/current
 
-npm -g install
+npm install
 
-pm2 stop <%= @name %>
-pm2 kill
+pm2 delete <%= @name %>
+
 PORT=<%= @port %> pm2 start <%= @js %> \
     -n <%= @name %> \
     --run-as-user <%= @user %> \
